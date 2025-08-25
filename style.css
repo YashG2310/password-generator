@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 500;
+    text-align: left;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.checkbox-group label {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+.checkbox-group input {
+    margin-right: 8px;
+    accent-color: #2575fc;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #2575fc;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px 5px 0 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #6a11cb;
+}
+
+#passwordDisplay {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    word-break: break-word;
+    user-select: all;
+}
+
+#copyMsg {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: green;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#strength {
+    margin-top: 10px;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    overflow: hidden;
+}
+
+#strength div {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+
+.weak {
+    background: #ff4d4d;
+}
+
+.medium {
+    background: #ffa500;
+}
+
+.strong {
+    background: #4caf50;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
